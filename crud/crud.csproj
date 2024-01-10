@@ -23,10 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Domain\Dtos\" />
       <Folder Include="Domain\Mappers\" />
-      <Folder Include="Services\Token\" />
-      <Folder Include="Services\Validations\" />
     </ItemGroup>
 
 </Project>

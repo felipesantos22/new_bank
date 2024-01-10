@@ -1,4 +1,5 @@
 using System.Globalization;
+using crud.Application.Services.Validations;
 using crud.Infrastructure.Data;
 using crud.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<DeposityRepository>();
+builder.Services.AddScoped<UserFk>();
 builder.Services.AddControllers();
 
 var app = builder.Build();

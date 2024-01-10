@@ -103,3 +103,4 @@ C:\Users\Felipe\RiderProjects\crud\crud\obj\Debug\net8.0\crud.genruntimeconfig.c
 C:\Users\Felipe\RiderProjects\crud\crud\obj\Debug\net8.0\ref\crud.dll
 C:\Users\Felipe\RiderProjects\crud\crud\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\Felipe\RiderProjects\crud\crud\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Felipe\RiderProjects\crud\crud\obj\Debug\net8.0\crud.sourcelink.json

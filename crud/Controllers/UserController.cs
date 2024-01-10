@@ -1,4 +1,5 @@
-﻿using crud.Domain.Entities;
+﻿using crud.Application.Services.Validations;
+using crud.Domain.Entities;
 using crud.Infrastructure.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,19 +10,17 @@ namespace crud.Controllers;
 public class UserController: ControllerBase
 {
     private readonly UserRepository _userRepository;
-    private readonly DeposityRepository _deposityRepository;
 
-    public UserController(UserRepository userRepository, DeposityRepository deposityRepository)
+    public UserController(UserRepository userRepository)
     {
         _userRepository = userRepository;
-        _deposityRepository = deposityRepository;
     }
 
     [HttpPost]
     public async Task<ActionResult<User>> Create([FromBody] User user)
     {
-        var newUser = await _userRepository.Create(user);
         
+        var newUser = await _userRepository.Create(user);
         return Ok(newUser);
     }
     

@@ -1,4 +1,5 @@
-﻿using crud.Domain.Entities;
+﻿using crud.Domain.Dtos;
+using crud.Domain.Entities;
 using crud.Domain.Interfaces;
 using crud.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

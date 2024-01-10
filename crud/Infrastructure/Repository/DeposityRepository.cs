@@ -1,4 +1,5 @@
-﻿using crud.Domain.Entities;
+﻿using crud.Domain.Dtos;
+using crud.Domain.Entities;
 using crud.Domain.Interfaces;
 using crud.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +22,14 @@ public class DeposityRepository: IProduct
         return deposity;
     }
 
-    public async Task<List<Deposity>> Index()
+    public async Task<List<DeposityDto>> Index()
     {
-        var depositions = await _dataContext.Deposities.ToListAsync();
+        var depositions = await _dataContext.Deposities.Select(d => new DeposityDto()
+        {
+            Value = d.Value,
+            Date = d.Date,
+            UserId = d.UserId
+        }).ToListAsync();
         return depositions;
     }
 
